@@ -751,13 +751,13 @@
   <a class="skip-link screen-reader-text" href="#main">Skip to content</a>
   <div id="wrapper">
 
-    <?php $this->load->view("site/static/header") ?>
+    <?= view("site/static/header") ?>
 
-    <?php $this->load->view($temp, $this->data) ?>
+    <?= view($temp, $this->data) ?>
 
-    <?php $this->load->view("site/static/mobile-menu") ?>
+    <?= view("site/static/mobile-menu") ?>
 
-    <?php $this->load->view("site/static/footer", $this->data) ?>
+    <?= view("site/static/footer", $this->data) ?>
   </div>
 
   <script type="text/javascript">

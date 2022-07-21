@@ -138,11 +138,11 @@ $contact_active = "menu-item menu-item-type-post_type menu-item-object-page curr
             <div class="flex-row container">
                 <div class="flex-col hide-for-medium flex-left">
                     <ul class="nav header-nav header-bottom-nav nav-left nav-uppercase">
-                        <li id="menu-item-24" class="<?= $this->uri->segment(1)  == "trang-chu" || $this->uri->segment(1) == "" ? $home_active : $home ?>"><a href="<?= site_url("trang-chu") ?>" class="nav-top-link">Trang chủ</a></li>
-                        <li id="menu-item-22" class="<?= $this->uri->segment(1)  == "gioi-thieu" ? $about_active : $about ?>"><a href="<?= site_url("gioi-thieu") ?>" class="nav-top-link">Giới thiệu</a></li>
-                        <li id="menu-item-723" class="<?= $this->uri->segment(1) == "dich-vu" ? $service_active : $services ?>"><a href="<?= site_url("dich-vu") ?>" class="nav-top-link">Dịch vụ</a></li>
-                        <li id="menu-item-25" class="<?= $this->uri->segment(1)  == "tin-tuc"  ? $news_active : $news ?>"><a href="<?= site_url("tin-tuc") ?>" class="nav-top-link">Tin tức</a></li>
-                        <li id="menu-item-23" class="<?= $this->uri->segment(1)  == "lien-he" ? $contact_active : $contact ?>"><a href="<?= site_url("lien-he") ?>" class="nav-top-link">Liên hệ</a></li>
+                        <li id="menu-item-24" class="<?= uri_string(1)  == "trang-chu" || uri_string(1) == "" ? $home_active : $home ?>"><a href="<?= site_url("trang-chu") ?>" class="nav-top-link">Trang chủ</a></li>
+                        <li id="menu-item-22" class="<?= uri_string(1)  == "gioi-thieu" ? $about_active : $about ?>"><a href="<?= site_url("gioi-thieu") ?>" class="nav-top-link">Giới thiệu</a></li>
+                        <li id="menu-item-723" class="<?= uri_string(1) == "dich-vu" ? $service_active : $services ?>"><a href="<?= site_url("dich-vu") ?>" class="nav-top-link">Dịch vụ</a></li>
+                        <li id="menu-item-25" class="<?= uri_string(1)  == "tin-tuc"  ? $news_active : $news ?>"><a href="<?= site_url("tin-tuc") ?>" class="nav-top-link">Tin tức</a></li>
+                        <li id="menu-item-23" class="<?= uri_string(1)  == "lien-he" ? $contact_active : $contact ?>"><a href="<?= site_url("lien-he") ?>" class="nav-top-link">Liên hệ</a></li>
                     </ul>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\ImagesModel;
@@ -10,16 +10,16 @@ use App\Models\SlideModel;
 class Home extends BaseController
 {
 
-    function index()
-    {
+    public function index()
+    {   
         $slide = new SlideModel();
-        $data["slide"] = $slide->findAll(3, 0);
+        $data["slide"] = $slide->query("SELECT * FROM slide")->getResult();
 
         $news = new NewsModel();
-        $data["news"] = $news->findAll(3, 0);
+        $data["news"] = $news->query("SELECT * FROM news")->getResult();
         
         $image = new ImagesModel();
-        $data["images"] = $image->where('status', 1)->findAll();
+        $data["images"] = $image->query("SELECT * FROM images WHERE status = 1")->getResult();
 
         $data["title"] = "Trang chủ";
         $data["temp"] = "site/home/index";

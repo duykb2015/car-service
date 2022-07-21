@@ -19,7 +19,7 @@ class AdminModel extends Model
     protected $useTimestamps = false;
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
-    protected $deletedField  = 'deleted_at';
+    protected $deletedField  = '';
 
     protected $validationRules    = [];
     protected $validationMessages = [];
