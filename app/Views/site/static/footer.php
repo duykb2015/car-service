@@ -49,10 +49,10 @@
                                 <?php foreach ($images as $item) : ?>
                                     <div class="gallery-col col">
                                         <div class="col-inner">
-                                            <a class="image-lightbox lightbox-gallery" href="<?= base_url("uploads/images/") . $item->image ?>" title="">
+                                            <a class="image-lightbox lightbox-gallery" href="<?= base_url("uploads/images/"). '/' . $item->image ?>" title="">
                                                 <div class="box has-hover gallery-box box-none">
                                                     <div class="box-image">
-                                                        <img width="849" height="537" src="<?= base_url("uploads/images/") . $item->image ?>" class="attachment-original size-original" alt="" ids="510,508,507,505,504,500" col_spacing="small" columns="3" columns__md="3" image_size="original" sizes="(max-width: 849px) 100vw, 849px" />
+                                                        <img width="849" height="537" src="<?= base_url("uploads/images/"). '/' . $item->image ?>" class="attachment-original size-original" alt="" ids="510,508,507,505,504,500" col_spacing="small" columns="3" columns__md="3" image_size="original" sizes="(max-width: 849px) 100vw, 849px" />
                                                     </div>
                                                     <div class="box-text text-left">
                                                         <p></p>

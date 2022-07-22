@@ -11,17 +11,12 @@ class ServicesModel extends Model
 
     protected $useAutoIncrement = true;
 
-    protected $returnType     = 'array';
-    protected $useSoftDeletes = true;
+    protected $returnType     = 'object';
+    protected $useSoftDeletes = false;
 
-    protected $allowedFields = [''];
+    protected $allowedFields = ['id ', 'name', 'description', 'slug', 'content', 'image', 'created_at', 'updated_at', 'status'];
 
     protected $useTimestamps = false;
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
-    protected $deletedField  = '';
-
-    protected $validationRules    = [];
-    protected $validationMessages = [];
-    protected $skipValidation     = false;
 }

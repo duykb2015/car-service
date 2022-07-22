@@ -13,13 +13,13 @@ class Home extends BaseController
     public function index()
     {   
         $slide = new SlideModel();
-        $data["slide"] = $slide->query("SELECT * FROM slide")->getResult();
+        $data["slide"] = $slide->findAll(3, 0);
 
         $news = new NewsModel();
-        $data["news"] = $news->query("SELECT * FROM news")->getResult();
+        $data["news"] = $news->findAll(3, 0);
         
         $image = new ImagesModel();
-        $data["images"] = $image->query("SELECT * FROM images WHERE status = 1")->getResult();
+        $data["images"] = $image->where('status', 1)->findAll(3, 0);
 
         $data["title"] = "Trang chủ";
         $data["temp"] = "site/home/index";

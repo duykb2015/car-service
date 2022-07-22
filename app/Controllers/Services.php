@@ -3,54 +3,42 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\ServicesModel;
 
 class Services extends BaseController
 {
     function index()
     {
-        $total_rows = $this->Services_model->get_total();
-        $this->load->library('pagination');
-        $config = array();
-        $config['total_rows']  = $total_rows;                //tong tat ca san pham
-        $config['base_url']    = site_url("dich-vu");  //noi hien thi ra ds san pham
-        $config['per_page']    = 12;                         //so luong hien thi moi trang
-        $config['uri_segment'] = 4;                          //phan doan lay tren url de hien thi trang nao
-        $config['page_query_string'] = TRUE;
-        $config['query_string_segment'] = 'segment';
-        $config['next_link']   = 'Tiếp';        $config['next_link']   = 'Tiếp';
+        $services = new ServicesModel();
+        $data = [
+            'service' => $services->paginate(10),
+            'pager' => $services->pager
+        ];
 
-        $config['prev_link']   = 'Trước';
-        $this->pagination->initialize($config);
+        $data['services'] = $services = $services->where('status', 1)->findAll(10);;
 
-        $segment = !empty($_GET["segment"]) ? $_GET["segment"] : 0;
-
-        $input['limit'] = array($config['per_page'], $segment);
-        $input['where'] = array('status' => 1);
-
-        $this->data['services'] = $this->Services_model->get_list($input);
-
-
-        $this->data["title"] = "Dịch vụ";
-        $this->data["temp"] = "site/services/index";
-        return view("site/layout", $this->data);
+        $data["title"] = "Dịch vụ";
+        $data["temp"] = "site/services/index";
+        return view("site/layout", $data);
     }
 
     function detail()
     {
-        $slug = $this->uri->rsegment(3);
+        $uri = service('uri');
+        $slug = explode('.html', $uri->getSegment(2))[0];
         $input = array(
             'slug' => $slug,
             "status" => 1
         );
-        $detail = $this->Services_model->get_info($input);
+        $services = new ServicesModel();
+        $detail = $services->where($input)->first();
         $this->data["detail"] = $detail;
 
-        $where_rel["where"] = [
+        $where_rel = [
             "id <> " => $detail->id,
             "status" => 1,
         ];
-        $where_rel["limit"] = [5, 0];
-        $this->data["relative_post"] = $this->Services_model->get_list($where_rel);
+        $this->data["relative_post"] = $services->where($where_rel)->findAll(5);
         $this->data['link'] = "dich-vu/";
         $this->data["title"] = "Chi tiết";
         $this->data["temp"] = "site/services/detail";

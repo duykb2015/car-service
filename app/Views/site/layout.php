@@ -24,7 +24,7 @@
       "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/",
       "svgExt": ".svg",
       "source": {
-        "concatemoji": "http:\/\/127.0.0.1\/car\/public\/site\/wp-includes\/js\/wp-emoji-release.min.js"
+        "concatemoji": "http:\/\/localhost:8080\/vendor\/site\/wp-includes\/js\/wp-emoji-release.min.js"
       }
     };
     ! function(a, b, c) {
@@ -146,7 +146,6 @@
       opacity: 1;
     }
   </style>
-  <!--[if IE]><link rel="stylesheet" type="text/css" href="http://mauweb.monamedia.net/autoser/wp-content/themes/flatsome/assets/css/ie-fallback.css"><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script><script>var head = document.getElementsByTagName('head')[0],style = document.createElement('style');style.type = 'text/css';style.styleSheet.cssText = ':before,:after{content:none !important';head.appendChild(style);setTimeout(function(){head.removeChild(style);}, 0);</script><script src="http://mauweb.monamedia.net/autoser/wp-content/themes/flatsome/assets/libs/ie-flexibility.js"></script><![endif]-->
   <script type="text/javascript">
     WebFontConfig = {
       google: {
@@ -274,28 +273,7 @@
       float: right;
     }
   </style>
-  <script type="text/javascript">
-    var essb_settings = {
-      "ajax_url": "http:\/\/mauweb.monamedia.net\/autoser\/wp-admin\/admin-ajax.php",
-      "essb3_nonce": "0063dac655",
-      "essb3_plugin_url": "http:\/\/mauweb.monamedia.net\/autoser\/wp-content\/plugins\/easy-social-share-buttons3",
-      "essb3_facebook_total": true,
-      "essb3_admin_ajax": false,
-      "essb3_internal_counter": false,
-      "essb3_stats": false,
-      "essb3_ga": false,
-      "essb3_ga_mode": "simple",
-      "essb3_counter_button_min": 0,
-      "essb3_counter_total_min": 0,
-      "blog_url": "http:\/\/mauweb.monamedia.net\/autoser\/",
-      "ajax_type": "wp",
-      "essb3_postfloat_stay": false,
-      "essb3_no_counter_mailprint": false,
-      "essb3_single_ajax": false,
-      "twitter_counter": "self",
-      "post_id": 16
-    };
-  </script>
+
   <style id="custom-css" type="text/css">
     :root {
       --primary-color: #1c63b8;
@@ -717,6 +695,11 @@
       margin: 0 4px;
     }
 
+    .pagination li {
+      list-style: none;
+      display: inline-block;
+    }
+
     .pagination strong {
       color: black;
       float: left;
@@ -725,7 +708,7 @@
       transition: background-color .3s;
       border: 1px solid #ddd;
       margin: 0 4px;
-    }
+    } 
 
     .pagination a.active {
       background-color: #4CAF50;
@@ -839,7 +822,7 @@
   <script type='text/javascript'>
     /* <![CDATA[ */
     var _zxcvbnSettings = {
-      "src": "http:\/\/127.0.0.1\/car\/public\/site\/wp-includes\/js\/zxcvbn.min.js"
+      "src": "http:\/\/localhost:8080\/vendor\/site\/wp-includes\/js\/zxcvbn.min.js"
     };
     /* ]]> */
   </script>
@@ -867,7 +850,6 @@
     /* ]]> */
   </script>
   <script type='text/javascript' src='<?= public_url("site/wp-content/plugins/woocommerce/assets/js/frontend/password-strength-meter.min.js") ?>'></script>
-  <style type="text/css"></style>
   <script type="text/javascript">
     var essb_clicked_lovethis = false;
     var essb_love_you_message_thanks = "Thank you for loving this.";

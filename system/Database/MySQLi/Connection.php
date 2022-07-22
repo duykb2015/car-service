@@ -120,23 +120,23 @@ class Connection extends BaseConnection
         if (is_array($this->encrypt)) {
             $ssl = [];
 
-            if (! empty($this->encrypt['ssl_key'])) {
+            if (!empty($this->encrypt['ssl_key'])) {
                 $ssl['key'] = $this->encrypt['ssl_key'];
             }
-            if (! empty($this->encrypt['ssl_cert'])) {
+            if (!empty($this->encrypt['ssl_cert'])) {
                 $ssl['cert'] = $this->encrypt['ssl_cert'];
             }
-            if (! empty($this->encrypt['ssl_ca'])) {
+            if (!empty($this->encrypt['ssl_ca'])) {
                 $ssl['ca'] = $this->encrypt['ssl_ca'];
             }
-            if (! empty($this->encrypt['ssl_capath'])) {
+            if (!empty($this->encrypt['ssl_capath'])) {
                 $ssl['capath'] = $this->encrypt['ssl_capath'];
             }
-            if (! empty($this->encrypt['ssl_cipher'])) {
+            if (!empty($this->encrypt['ssl_cipher'])) {
                 $ssl['cipher'] = $this->encrypt['ssl_cipher'];
             }
 
-            if (! empty($ssl)) {
+            if (!empty($ssl)) {
                 if (isset($this->encrypt['ssl_verify'])) {
                     if ($this->encrypt['ssl_verify']) {
                         if (defined('MYSQLI_OPT_SSL_VERIFY_SERVER_CERT')) {
@@ -191,7 +191,7 @@ class Connection extends BaseConnection
                     return false;
                 }
 
-                if (! $this->mysqli->set_charset($this->charset)) {
+                if (!$this->mysqli->set_charset($this->charset)) {
                     log_message('error', "Database: Unable to set the configured connection charset ('{$this->charset}').");
 
                     $this->mysqli->close();
@@ -328,7 +328,7 @@ class Connection extends BaseConnection
      */
     protected function _escapeString(string $str): string
     {
-        if (! $this->connID) {
+        if (!$this->connID) {
             $this->initialize();
         }
 
@@ -436,7 +436,7 @@ class Connection extends BaseConnection
             throw new DatabaseException(lang('Database.failGetIndexData'));
         }
 
-        if (! $indexes = $query->getResultArray()) {
+        if (!$indexes = $query->getResultArray()) {
             return [];
         }
 
@@ -544,7 +544,7 @@ class Connection extends BaseConnection
      */
     public function error(): array
     {
-        if (! empty($this->mysqli->connect_errno)) {
+        if (!empty($this->mysqli->connect_errno)) {
             return [
                 'code'    => $this->mysqli->connect_errno,
                 'message' => $this->mysqli->connect_error,

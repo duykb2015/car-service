@@ -49,7 +49,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <?php $url_image1 = base_url("uploads/images/") . $slide[0]->image ?>
+                                <?php $url_image1 = base_url("uploads/images") . '/' . $slide[0]->image ?>
                                 <style scope="scope">
                                     #banner-611639163 {
                                         padding-top: 250px;
@@ -110,7 +110,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <?php $url_image2 = base_url("uploads/images/") . $slide[1]->image ?>
+                                <?php $url_image2 = base_url("uploads/images/") . '/' . $slide[1]->image ?>
                                 <style scope="scope">
                                     #banner-612630637 {
                                         padding-top: 250px;
@@ -171,7 +171,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <?php $url_image3 = base_url("uploads/images/") . $slide[2]->image ?>
+                                <?php $url_image3 = base_url("uploads/images/") . '/'     . $slide[2]->image ?>
                                 <style scope="scope">
                                     #banner-292200350 {
                                         padding-top: 250px;
@@ -388,10 +388,10 @@
                                     <?php foreach ($images as $item) : ?>
                                         <div class="gallery-col col">
                                             <div class="col-inner">
-                                                <a class="image-lightbox lightbox-gallery" href="<?= base_url("uploads/images/") . $item->image ?>" title="">
+                                                <a class="image-lightbox lightbox-gallery" href="<?= base_url("uploads/images/") . '/' . $item->image ?>" title="">
                                                     <div class="box has-hover gallery-box box-overlay dark">
                                                         <div class="box-image image-zoom">
-                                                            <img width="300" height="190" src="<?= base_url("uploads/images/") . $item->image ?>" class="attachment-medium size-medium" alt="" ids="500,504,505,507,508,510" type="slider" columns="3" columns__sm="1" columns__md="2" slider_nav_style="simple" slider_nav_position="outside" auto_slide="3000" image_hover="zoom" sizes="(max-width: 300px) 100vw, 300px" />
+                                                            <img width="300" height="190" src="<?= base_url("uploads/images/") . '/' . $item->image ?>" class="attachment-medium size-medium" alt="" ids="500,504,505,507,508,510" type="slider" columns="3" columns__sm="1" columns__md="2" slider_nav_style="simple" slider_nav_position="outside" auto_slide="3000" image_hover="zoom" sizes="(max-width: 300px) 100vw, 300px" />
                                                             <div class="overlay fill" style="background-color: rgba(0,0,0,.15)">
                                                             </div>
                                                         </div>
@@ -486,7 +486,7 @@
                                                     <div class="box box-normal box-text-bottom box-blog-post has-hover">
                                                         <div class="box-image">
                                                             <div class="image-zoom image-cover" style="padding-top:70%;">
-                                                                <img width="1000" height="562" src="<?= base_url("uploads/images/") . $item->image ?>" class="attachment-original size-original wp-post-image" alt="" sizes="(max-width: 1000px) 100vw, 1000px" />
+                                                                <img width="1000" height="562" src="<?= base_url("uploads/images/") . '/' . $item->image ?>" class="attachment-original size-original wp-post-image" alt="" sizes="(max-width: 1000px) 100vw, 1000px" />
                                                             </div>
                                                         </div>
                                                         <div class="box-text text-center">

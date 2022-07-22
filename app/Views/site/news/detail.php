@@ -3,7 +3,7 @@
     <div id="content" class="blog-wrapper blog-single page-wrapper">
         <div class="row row-large row-divided ">
 
-            <?php $this->load->view("site/static/left", $this->data) ?>
+            <?= view("site/static/left", $this->data) ?>
             <div class="large-9 col medium-col-first">
 
                 <article id="post-751" class="post-751 post type-post status-publish format-standard has-post-thumbnail hentry category-cham-soc-xe-lam-dep category-dich-vu category-quy-trinh-bao-duong-noi-that">
@@ -17,7 +17,7 @@
                             </div><!-- .entry-header -->
 
                             <div class="entry-image relative">
-                                <img width="779" height="585" src="<?= base_url("uploads/images/") . $detail->image ?>" class="attachment-large size-large wp-post-image" alt="service image" sizes="(max-width: 779px) 100vw, 779px" />
+                                <img width="779" height="585" src="<?= base_url("uploads/images/") . '/' . $detail->image ?>" class="attachment-large size-large wp-post-image" alt="service image" sizes="(max-width: 779px) 100vw, 779px" />
                                 <div class="badge absolute top post-date badge-circle">
                                     <?php
                                     $date1 = explode(" ", $detail->create_at);

@@ -1073,18 +1073,22 @@ abstract class BaseModel
      */
     public function paginate(?int $perPage = null, string $group = 'default', ?int $page = null, int $segment = 0)
     {
+        
         $pager = Services::pager(null, null, false);
 
         if ($segment) {
             $pager->setSegment($segment, $group);
         }
+        
 
         $page = $page >= 1 ? $page : $pager->getCurrentPage($group);
+        
         // Store it in the Pager library, so it can be paginated in the views.
         $this->pager = $pager->store($group, $page, $perPage, $this->countAllResults(false), $segment);
+        
         $perPage     = $this->pager->getPerPage($group);
         $offset      = ($pager->getCurrentPage($group) - 1) * $perPage;
-
+        
         return $this->findAll($perPage, $offset);
     }
 

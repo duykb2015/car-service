@@ -77,9 +77,9 @@
                                     }
                                 </style>
                             </div>
-                            <p><strong>Địa chỉ:</strong>77 chuyên dùng 9, P. Phũ Mỹ, Q.7, Tp.HCM</p>
-                            <p><strong>Điện thoại:</strong> <a href="tel:0337803128">033 780 3128</a></p>
-                            <p><strong>Email:</strong> <a href="mailto:duyx4545@gmail.com"><span class="__cf_email__">duyx4545@gmail.com</span></a></p>
+                            <p><strong>Địa chỉ:</strong>abc, Phường xyz, Tp.HCM</p>
+                            <p><strong>Điện thoại:</strong> <a href="tel:033780xxxx">033 780 xxxx</a></p>
+                            <p><strong>Email:</strong> <a href="mailto:duyxxxxx@gmail.com"><span class="__cf_email__">duyxxxxx@gmail.com</span></a></p>
                         </div>
                     </div>
                 </div>
@@ -113,7 +113,7 @@
                             <div class="col medium-3 small-12 large-3" data-animate="bounceInRight">
                                 <div class="col-inner text-center" style="padding:10px 0px 0px 0px;">
                                     <a href="tel:0337803128" target="_self" class="button white is-large call_hotline" style="border-radius:5px;">
-                                        <span>033 780 3128</span>
+                                        <span>033 780 xxxx</span>
                                     </a>
                                 </div>
                             </div>

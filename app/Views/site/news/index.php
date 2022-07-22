@@ -15,6 +15,7 @@
 
             <div class="large-12 col medium-col-first">
                 <div id="row-1582493931" class="row large-columns-4 medium-columns- small-columns-1 has-shadow row-box-shadow-1 row-box-shadow-2-hover row-masonry" data-packery-options='{"itemSelector": ".col", "gutter": 0, "presentageWidth" : true}'>
+
                     <?php if (!empty($news)) : ?>
                         <?php foreach ($news as $item) : ?>
                             <div class="col post-item">
@@ -23,7 +24,7 @@
                                         <div class="box box-text-bottom box-blog-post has-hover">
                                             <div class="box-image">
                                                 <div class="image-cover" style="padding-top:56%;">
-                                                    <img width="300" height="205" src="<?= base_url("uploads/images/") . $item->image ?>" class="attachment-medium size-medium wp-post-image" alt="" />
+                                                    <img width="300" height="205" src="<?= base_url("uploads/images") . '/' . $item->image ?>" class="attachment-medium size-medium wp-post-image" alt="" />
                                                 </div>
                                             </div>
                                             <div class="box-text text-left">
@@ -51,7 +52,7 @@
                     <?php endif ?>
                 </div>
 
-                <div class="pagination pag_center"><?= $this->pagination->create_links() ?></div>
+                <div class="pagination pag_center"><?= $pager->links('pagination', 'custom') ?></div>
             </div>
         </div>
     </div>

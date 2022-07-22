@@ -23,7 +23,7 @@
                                         <div class="box box-text-bottom box-blog-post has-hover">
                                             <div class="box-image">
                                                 <div class="image-cover" style="padding-top:56%;">
-                                                    <img width="300" height="205" src="<?= base_url("uploads/images/") . $item->image ?>" class="attachment-medium size-medium wp-post-image" alt="" />
+                                                    <img width="300" height="205" src="<?= base_url("uploads/images/") . '/' . $item->image ?>" class="attachment-medium size-medium wp-post-image" alt="" />
                                                 </div>
                                             </div>
                                             <div class="box-text text-left">
@@ -51,7 +51,9 @@
                     <?php endif ?>
                 </div>
 
-                <div class="pagination pag_center"><?= $this->pagination->create_links() ?></div>
+                <div class="pag_center">
+                    <?= $pager->links('default', 'default_full') ?>
+                </div>
             </div>
         </div>
     </div>

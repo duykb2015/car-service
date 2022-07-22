@@ -24,7 +24,7 @@ $contact_active = "menu-item menu-item-type-post_type menu-item-object-page curr
                 <div class="flex-col hide-for-medium flex-left">
                     <ul class="nav nav-left medium-nav-center nav-small  nav-divided">
                         <li class="html custom html_topbar_left">
-                            <p class="mona_html showroom">77 chuyên dùng 9, P.Phũ Mỹ, Q.7, Tp.HCM</p>
+                            <p class="mona_html showroom">abc, Phường xyz, Tp.HCM</p>
                         </li>
                         <li class="html custom html_topbar_right">
                             <p class="mona_html hotline"><a href="tel:0337803128">033 780 3128</a></p>
@@ -38,7 +38,7 @@ $contact_active = "menu-item menu-item-type-post_type menu-item-object-page curr
                 <div class="flex-col show-for-medium flex-grow">
                     <ul class="nav nav-center nav-small mobile-nav  nav-divided">
                         <li class="html custom html_topbar_left">
-                            <p class="mona_html showroom">319 - C16 Lý Thường Kiệt, P.15, Q.11, Tp.HCM</p>
+                            <p class="mona_html showroom">abc, Phường xyz, Tp.HCM</p>
                         </li>
                     </ul>
                 </div>
@@ -48,10 +48,10 @@ $contact_active = "menu-item menu-item-type-post_type menu-item-object-page curr
         <div id="masthead" class="header-main ">
             <div class="header-inner flex-row container logo-left medium-logo-center" role="navigation">
 
-                <div id="logo" class="flex-col logo">
-                    <a href="<?= site_url("trang-chu") ?>" title="AutoSer" rel="home">
-                        <img width="430" height="91" src="<?= public_url("site") ?>/wp-content/uploads/2019/01/logo-mona-1.png" class="header_logo header-logo" alt="AutoSer" />
-                        <img width="430" height="91" src="<?= public_url("site") ?>/wp-content/uploads/2019/01/logo-mona-1.png" class="header-logo-dark" alt="AutoSer" />
+                <div id="logo" class="flex-col logo" style="width:230px">
+                    <a href="<?= site_url("trang-chu") ?>" title="AutoSer" rel="home" >
+                        <img width="230" height="91" src="<?= public_url("site") ?>/wp-content/uploads/2019/01/logo-mona-1.png" class="header_logo header-logo" alt="AutoSer" />
+                        <img width="230" height="91" src="<?= public_url("site") ?>/wp-content/uploads/2019/01/logo-mona-1.png" class="header-logo-dark" alt="AutoSer" />
                     </a>
                 </div>
 
@@ -85,12 +85,12 @@ $contact_active = "menu-item menu-item-type-post_type menu-item-object-page curr
                                         <p>
                                             <span style="font-size: 90%;">
                                                 <strong>
-                                                    <a href="tel:0337803128" style="color: #1c63b8;">0337803128</a>
+                                                    <a href="tel:0337803128" style="color: #1c63b8;">033780xxxx</a>
                                                 </strong>
                                             </span><br />
                                             <span style="font-size: 90%;">
-                                                <a style="color: #777;" href="mailto:duyx4545@gmail.com">
-                                                    <span class="__cf_email__" data-cfemail="0367666e6c6d6b766d7766716443646e626a6f2d606c6e">duyx4545@gmail.com</span>
+                                                <a style="color: #777;" href="mailto:duyxxxxx@gmail.com">
+                                                    <span class="__cf_email__" data-cfemail="0367666e6c6d6b766d7766716443646e626a6f2d606c6e">duyxxxxx@gmail.com</span>
                                                 </a>
                                             </span>
                                         </p>
@@ -118,7 +118,7 @@ $contact_active = "menu-item menu-item-type-post_type menu-item-object-page curr
                         </li>
                     </ul>
                 </div>
-                <div class="flex-col hide-for-medium flex-right">
+                <div class="flex-col hide-for-medium flex-left">
                     <ul class="header-nav header-nav-main nav nav-right  nav-uppercase">
                         <li class="html header-button-1">
                             <div class="header-button">
